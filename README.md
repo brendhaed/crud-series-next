@@ -79,3 +79,5 @@ Resumo da estrutura de pastas principal:
 
   - Executar dentro da pasta: brendha-projeto-frontend-fase2
   - `npm test`
+## Projeto no ar:
+[Projeto na Vercel](https://crud-series-next.vercel.app/)
