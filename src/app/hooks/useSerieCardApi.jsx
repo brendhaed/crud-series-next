@@ -3,7 +3,7 @@ import axios from "axios";
 const useSerieCards = () => {
   const getSerieCards = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/series");
+      const response = await axios.get("https://seriejournal-api.onrender.com/series");
       return response.data;
     } catch (error) {
       throw new Error(error.message);
@@ -12,7 +12,7 @@ const useSerieCards = () => {
 
   const getSerieCard = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:5000/series/${id}`);
+      const response = await axios.get(`https://seriejournal-api.onrender.com/series/${id}`);
       return response.data;
     } catch (error) {
       throw new Error(error.message);
@@ -24,7 +24,7 @@ const updateSerieCard = async (updatedSerie) => {
     const { id } = updatedSerie; 
     
     await axios.put(
-      `http://localhost:5000/series/${id}`, updatedSerie
+      `https://seriejournal-api.onrender.com/series/${id}`, updatedSerie
     );
   } catch (error) {
     throw new Error(error.message);
@@ -33,7 +33,7 @@ const updateSerieCard = async (updatedSerie) => {
 
   const deleteSerieCard = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/series/${id}`);
+      await axios.delete(`https://seriejournal-api.onrender.com/series/${id}`);
     } catch (error) {
       throw new Error(error.message);
     }
@@ -41,7 +41,7 @@ const updateSerieCard = async (updatedSerie) => {
 
   const createSerieCard = async (newSerie) => {
     try {
-      await axios.post("http://localhost:5000/series", newSerie);
+      await axios.post("https://seriejournal-api.onrender.com/series", newSerie);
     } catch (error) {
       throw new Error(error.message);
     }
